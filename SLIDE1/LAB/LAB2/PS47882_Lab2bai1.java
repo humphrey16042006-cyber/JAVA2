@@ -58,15 +58,15 @@ public class PS47882_Lab2bai1 {
         scanner.nextLine();
 
         for (int i = 0; i < n; i++) {
-            System.out.println("Nhap thong tin sinh vien thu " + (i + 1) + ":");
-            System.out.print("ID: ");
-            String id = scanner.next();
-            System.out.print("Name: ");
-            String name = scanner.next();
-            System.out.print("GPA: ");
-            double gpa = scanner.nextDouble();
-            System.out.print("Type (REGULAR, PART_TIME, INTERNATIONAL): ");
-            Studenttype type = Studenttype.valueOf(scanner.next().toUpperCase());
+           System.out.println("Nhap thong tin sinh vien thu " + (i + 1) + ":");
+           System.out.print("ID: ");
+           String id = scanner.nextLine();
+           System.out.print("Name: ");
+           String name = scanner.nextLine();  // cho phép nhập tên có khoảng trắng
+           System.out.print("GPA: ");
+           double gpa = Double.parseDouble(scanner.nextLine());
+           System.out.print("Type (REGULAR, PART_TIME, INTERNATIONAL): ");
+            Studenttype type = Studenttype.valueOf(scanner.nextLine().toUpperCase());
             students.add(new Student(id, name, gpa, type));
         }
 
